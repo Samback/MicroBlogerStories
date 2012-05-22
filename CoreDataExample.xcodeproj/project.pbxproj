@@ -15,6 +15,10 @@
 		502CEAB1156AAED400A87850 /* CoreAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 502CEAB0156AAED400A87850 /* CoreAppDelegate.m */; };
 		502CEAB4156AAED400A87850 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502CEAB2156AAED400A87850 /* MainStoryboard.storyboard */; };
 		502CEAB7156AAED400A87850 /* CoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502CEAB6156AAED400A87850 /* CoreViewController.m */; };
+		502CEABF156AB37400A87850 /* SchoolStudentsTabelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502CEABE156AB37400A87850 /* SchoolStudentsTabelListViewController.m */; };
+		502CEAC2156AB58D00A87850 /* StudentDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 502CEAC0156AB58D00A87850 /* StudentDB.xcdatamodeld */; };
+		502CEAD2156ABE0A00A87850 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 502CEAD1156ABE0A00A87850 /* CoreData.framework */; };
+		502CEAD9156B5C8700A87850 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 502CEAD8156B5C8700A87850 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +26,21 @@
 		502CEAA0156AAED400A87850 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		502CEAA2156AAED400A87850 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		502CEAA4156AAED400A87850 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		502CEAA8156AAED400A87850 /* CoreDataExample-Info.plist */ = {isa = PBXFileReference; path = "CoreDataExample-Info.plist"; sourceTree = "<group>"; };
+		502CEAA8156AAED400A87850 /* CoreDataExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreDataExample-Info.plist"; sourceTree = "<group>"; };
 		502CEAAA156AAED400A87850 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		502CEAAC156AAED400A87850 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		502CEAAE156AAED400A87850 /* CoreDataExample-Prefix.pch */ = {isa = PBXFileReference; path = "CoreDataExample-Prefix.pch"; sourceTree = "<group>"; };
-		502CEAAF156AAED400A87850 /* CoreAppDelegate.h */ = {isa = PBXFileReference; path = CoreAppDelegate.h; sourceTree = "<group>"; };
+		502CEAAE156AAED400A87850 /* CoreDataExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreDataExample-Prefix.pch"; sourceTree = "<group>"; };
+		502CEAAF156AAED400A87850 /* CoreAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAppDelegate.h; sourceTree = "<group>"; };
 		502CEAB0156AAED400A87850 /* CoreAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAppDelegate.m; sourceTree = "<group>"; };
 		502CEAB3156AAED400A87850 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		502CEAB5156AAED400A87850 /* CoreViewController.h */ = {isa = PBXFileReference; path = CoreViewController.h; sourceTree = "<group>"; };
+		502CEAB5156AAED400A87850 /* CoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreViewController.h; sourceTree = "<group>"; };
 		502CEAB6156AAED400A87850 /* CoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreViewController.m; sourceTree = "<group>"; };
+		502CEABD156AB37400A87850 /* SchoolStudentsTabelListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolStudentsTabelListViewController.h; sourceTree = "<group>"; };
+		502CEABE156AB37400A87850 /* SchoolStudentsTabelListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolStudentsTabelListViewController.m; sourceTree = "<group>"; };
+		502CEAC1156AB58D00A87850 /* StudentDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentDB.xcdatamodel; sourceTree = "<group>"; };
+		502CEAD1156ABE0A00A87850 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		502CEAD7156B5C8700A87850 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		502CEAD8156B5C8700A87850 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502CEAD2156ABE0A00A87850 /* CoreData.framework in Frameworks */,
 				502CEAA1156AAED400A87850 /* UIKit.framework in Frameworks */,
 				502CEAA3156AAED400A87850 /* Foundation.framework in Frameworks */,
 				502CEAA5156AAED400A87850 /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +61,7 @@
 		502CEA91156AAED400A87850 = {
 			isa = PBXGroup;
 			children = (
+				502CEAD1156ABE0A00A87850 /* CoreData.framework */,
 				502CEAA6156AAED400A87850 /* CoreDataExample */,
 				502CEA9F156AAED400A87850 /* Frameworks */,
 				502CEA9D156AAED400A87850 /* Products */,
@@ -83,6 +95,8 @@
 				502CEAB5156AAED400A87850 /* CoreViewController.h */,
 				502CEAB6156AAED400A87850 /* CoreViewController.m */,
 				502CEAA7156AAED400A87850 /* Supporting Files */,
+				502CEABD156AB37400A87850 /* SchoolStudentsTabelListViewController.h */,
+				502CEABE156AB37400A87850 /* SchoolStudentsTabelListViewController.m */,
 			);
 			path = CoreDataExample;
 			sourceTree = "<group>";
@@ -94,6 +108,9 @@
 				502CEAA9156AAED400A87850 /* InfoPlist.strings */,
 				502CEAAC156AAED400A87850 /* main.m */,
 				502CEAAE156AAED400A87850 /* CoreDataExample-Prefix.pch */,
+				502CEAD7156B5C8700A87850 /* Student.h */,
+				502CEAD8156B5C8700A87850 /* Student.m */,
+				502CEAC0156AB58D00A87850 /* StudentDB.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -164,6 +181,9 @@
 				502CEAAD156AAED400A87850 /* main.m in Sources */,
 				502CEAB1156AAED400A87850 /* CoreAppDelegate.m in Sources */,
 				502CEAB7156AAED400A87850 /* CoreViewController.m in Sources */,
+				502CEABF156AB37400A87850 /* SchoolStudentsTabelListViewController.m in Sources */,
+				502CEAC2156AB58D00A87850 /* StudentDB.xcdatamodeld in Sources */,
+				502CEAD9156B5C8700A87850 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,11 +224,11 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -221,11 +241,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -273,8 +293,22 @@
 				502CEABC156AAED400A87850 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		502CEAC0156AB58D00A87850 /* StudentDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				502CEAC1156AB58D00A87850 /* StudentDB.xcdatamodel */,
+			);
+			currentVersion = 502CEAC1156AB58D00A87850 /* StudentDB.xcdatamodel */;
+			path = StudentDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 502CEA93156AAED400A87850 /* Project object */;
 }

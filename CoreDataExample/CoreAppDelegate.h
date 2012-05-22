@@ -1,15 +1,10 @@
-//
-//  CoreAppDelegate.h
-//  CoreDataExample
-//
-//  Created by Max Tymchii on 21.05.12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
 @interface CoreAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property (retain, nonatomic) UIWindow *window;
+@property (nonatomic, retain) NSManagedObjectContext * managedObjectContext;
+@property (nonatomic, retain) NSManagedObjectModel        * managedObjectModel;
+@property (nonatomic, retain) NSPersistentStoreCoordinator * persistentStoreCoordinator;
 @end
