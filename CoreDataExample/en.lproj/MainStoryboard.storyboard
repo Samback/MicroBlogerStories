@@ -129,7 +129,13 @@
                             <outlet property="delegate" destination="Xyg-hZ-KQi" id="8UA-3E-WZI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="w3R-JE-QJz"/>
+                    <navigationItem key="navigationItem" id="w3R-JE-QJz">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="trash" id="hBP-Pp-qhS">
+                            <connections>
+                                <action selector="deleteChoosenRow:" destination="Xyg-hZ-KQi" id="zGM-dA-yVQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="view" destination="fBm-IE-Okw" id="U8P-f8-rwr"/>
                     </connections>
