@@ -22,6 +22,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    CoreAppDelegate * appDelegate = [[UIApplication sharedApplication] delegate];
+    self.context = [appDelegate managedObjectContext];
   // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -46,8 +48,6 @@
     [self.view endEditing:YES];
 }
 - (IBAction)saveStudentInfo:(id)sender {
-    CoreAppDelegate * appDelegate = [[UIApplication sharedApplication] delegate];
-    self.context = [appDelegate managedObjectContext];
     Student * student =  [NSEntityDescription                                                            insertNewObjectForEntityForName:@"Student"                                                            inManagedObjectContext:_context];
     student.firstName = _firstNameField.text;
     student.lastName  = _lastNameField.text;
