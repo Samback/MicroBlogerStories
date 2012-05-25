@@ -4,7 +4,10 @@
 
 @interface SchoolStudentsTabelListViewController ()
 @property (nonatomic, retain)NSManagedObjectContext * context;
+@property (nonatomic, retain)NSEntityDescription * entityDescription;
 @property (nonatomic, retain)NSArray * students;
+@property (nonatomic, assign)BOOL selected;
+-(void) studentsList;
 
 
 @end
@@ -12,6 +15,8 @@
 @implementation SchoolStudentsTabelListViewController
 @synthesize context = _context;
 @synthesize students = _students;
+@synthesize entityDescription = _entityDescription;
+@synthesize selected = _selected;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,20 +32,23 @@
     [super viewDidLoad];
     CoreAppDelegate * appDelegate = [[UIApplication sharedApplication] delegate];
     self.context = [appDelegate managedObjectContext];
-    NSEntityDescription * entityDescription = [NSEntityDescription entityForName:@"Student" inManagedObjectContext:_context];
-  
+    self.entityDescription = [NSEntityDescription entityForName:@"Student" inManagedObjectContext:_context];  
+    _selected = NO;
+    [self studentsList];
+}
+-(void) studentsList
+{
     NSFetchRequest * request = [[NSFetchRequest alloc] init];
-    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"(age BETWEEN {20, 30}) OR (firstName LIKE[c] 'Max')"];
-  
-    [request setEntity:entityDescription];
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"(age BETWEEN {10, 50})"];/* OR (firstName LIKE[c] 'Max')"];*/
+    
+    [request setEntity:_entityDescription];
     [request setPredicate:predicate];
     NSError * error;
     self.students = [_context executeFetchRequest:request error:&error];
     if (_students == nil)
         NSLog(@"The error with Core Data");
-  NSLog(@"Number of elements %d", [_students count]);
-  [request release];
-    
+    NSLog(@"Number of elements %d", [_students count]);
+    [request release];
 }
 
 - (void)viewDidUnload
@@ -48,6 +56,7 @@
   [super viewDidUnload];
   self.context = nil;
   self.students = nil;
+  self.entityDescription = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -88,14 +97,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    _selected = YES;
+}
+- (IBAction)deleteChoosenRow:(UIBarButtonItem *)sender 
+{
+    if (_selected && ([_students count ] > 0)) 
+    {      
+        NSInteger row = [self.tableView indexPathForSelectedRow].row;
+        
+        Student * student = [_students objectAtIndex:row];
+        [_context deleteObject:student];
+        
+        NSError * error;
+        if (![_context save:&error]) 
+        {
+            NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+            return;
+        }    
+        [self studentsList];
+        [self.tableView reloadData];
+        NSLog(@" %d num",  [_students count]);
+    }
 }
 
 @end
