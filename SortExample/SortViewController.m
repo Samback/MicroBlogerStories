@@ -56,24 +56,26 @@
     [self arrayMaker];
     if ([_inputArray count] > 2)
     { 
-        NSNumber * temp  = nil;
+       
         for (int j = 0; j < [_inputArray count]-1; j++)
             for (int i = 0; i < [_inputArray count]-1; i++)
             {
                 if ([[_inputArray objectAtIndex:i] intValue] > [[_inputArray objectAtIndex:i+1] intValue]) 
-                {
-                    temp =  [_inputArray objectAtIndex:i];
-                    NSLog(@"replace %@   and %@", temp, [_inputArray objectAtIndex:i+1]);
-                    [self.inputArray replaceObjectAtIndex:i withObject:[_inputArray objectAtIndex:i+1]];
-                    [self.inputArray replaceObjectAtIndex:i+1 withObject:temp];
-                }
-                NSLog(@"%@", _inputArray);
+                    [self swapLeft:i andRight:i+1];                
             }
     }
     _resultLabel.text = [_inputArray componentsJoinedByString:@","];
     
 }
+-(void)swapLeft:(int)i andRight:(int)j
+{
+    NSNumber * temp  = nil;
+    temp =  [_inputArray objectAtIndex:i];
+   // NSLog(@"replace %@   and %@", temp, [_inputArray objectAtIndex:j]);
+    [self.inputArray replaceObjectAtIndex:i withObject:[_inputArray objectAtIndex:j]];
+    [self.inputArray replaceObjectAtIndex:j withObject:temp];
 
+}
 - (IBAction)comparatorSort:(UIButton *)sender {
     [self arrayMaker];
     if ([_inputArray count] > 2)
@@ -91,7 +93,33 @@
       _resultLabel.text = [_inputArray componentsJoinedByString:@","];
 }
 - (IBAction)quickSort:(UIButton *)sender {
+    [self arrayMaker];
+    [self sortBeginElement:0 endElemen:[_inputArray count]-1];
+    _resultLabel.text = [_inputArray componentsJoinedByString:@","];
+
 }
 
+- (void) sortBeginElement:(int)beg endElemen:(int)end
+{
+    if (end > beg + 1)
+    {
+        int  piv = [[_inputArray objectAtIndex:beg]intValue];
+        int  l = beg + 1;
+        int  r = end;
+        
+        while (l < r)
+        {
+            if ([[_inputArray objectAtIndex:l] intValue] <= piv)
+                l++;
+            else
+                [self swapLeft:l andRight:--r];
+        }
+        
+        [self swapLeft:--l andRight:beg];
+       
+        [self sortBeginElement:beg endElemen:l];
+        [self sortBeginElement:r endElemen:end];             
+    }
+}
 
 @end
