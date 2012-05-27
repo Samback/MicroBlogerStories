@@ -22,14 +22,14 @@
 		50F20F851572C4AF00278EAD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		50F20F871572C4AF00278EAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		50F20F891572C4AF00278EAD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		50F20F8D1572C4B000278EAD /* SortExample-Info.plist */ = {isa = PBXFileReference; path = "SortExample-Info.plist"; sourceTree = "<group>"; };
+		50F20F8D1572C4B000278EAD /* SortExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SortExample-Info.plist"; sourceTree = "<group>"; };
 		50F20F8F1572C4B000278EAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		50F20F911572C4B000278EAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		50F20F931572C4B000278EAD /* SortExample-Prefix.pch */ = {isa = PBXFileReference; path = "SortExample-Prefix.pch"; sourceTree = "<group>"; };
-		50F20F941572C4B000278EAD /* SortAppDelegate.h */ = {isa = PBXFileReference; path = SortAppDelegate.h; sourceTree = "<group>"; };
+		50F20F931572C4B000278EAD /* SortExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SortExample-Prefix.pch"; sourceTree = "<group>"; };
+		50F20F941572C4B000278EAD /* SortAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortAppDelegate.h; sourceTree = "<group>"; };
 		50F20F951572C4B000278EAD /* SortAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortAppDelegate.m; sourceTree = "<group>"; };
 		50F20F981572C4B000278EAD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		50F20F9A1572C4B000278EAD /* SortViewController.h */ = {isa = PBXFileReference; path = SortViewController.h; sourceTree = "<group>"; };
+		50F20F9A1572C4B000278EAD /* SortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortViewController.h; sourceTree = "<group>"; };
 		50F20F9B1572C4B000278EAD /* SortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
