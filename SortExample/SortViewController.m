@@ -121,5 +121,12 @@
         [self sortBeginElement:r endElemen:end];             
     }
 }
+- (IBAction)sortUsingDescriptor:(UIButton *)sender {
+    [self arrayMaker];
+    
+    NSSortDescriptor* desc = [[NSSortDescriptor alloc] initWithKey:@"" ascending:YES];
+    [_inputArray sortUsingDescriptors:[NSArray arrayWithObject:desc]];
+    _resultLabel.text = [_inputArray componentsJoinedByString:@","];
+}
 
 @end
